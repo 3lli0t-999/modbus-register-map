@@ -1,0 +1,72 @@
+{
+  "site": "HELIX-NORTH",
+  "unit_id": 1,
+  "description": "North works effluent treatment - Modbus TCP slave 10.42.7.11:502",
+  "registers": [
+    {
+      "tag": "LT-101.PV",
+      "address": 0,
+      "type": "float32",
+      "unit": "m",
+      "description": "Wet well level"
+    },
+    {
+      "tag": "FT-102.PV",
+      "address": 2,
+      "type": "float32",
+      "unit": "m3/h",
+      "description": "Inlet flow"
+    },
+    {
+      "tag": "PT-103.PV",
+      "address": 4,
+      "type": "float32",
+      "unit": "bar",
+      "description": "Discharge pressure"
+    },
+    {
+      "tag": "TT-104.PV",
+      "address": 6,
+      "type": "float32",
+      "unit": "degC",
+      "description": "Motor winding temperature"
+    },
+    {
+      "tag": "P-101.STATE",
+      "address": 8,
+      "type": "bitfield",
+      "description": "Pump 101 status word",
+      "bits": {
+        "0": "running",
+        "1": "fault",
+        "2": "remote",
+        "3": "interlock_ok"
+      }
+    },
+    {
+      "tag": "AIT-105.PV",
+      "address": 9,
+      "type": "u16",
+      "scale": 0.01,
+      "unit": "pH",
+      "minimum": 0,
+      "maximum": 14,
+      "description": "Final effluent pH (x100)"
+    },
+    {
+      "tag": "VFD-101.SPD",
+      "address": 10,
+      "type": "float32",
+      "unit": "Hz",
+      "description": "Pump 101 VFD speed reference feedback"
+    },
+    {
+      "tag": "FT-102.TOT",
+      "address": 12,
+      "type": "u32",
+      "scale": 0.1,
+      "unit": "m3",
+      "description": "Totalised inlet volume"
+    }
+  ]
+}

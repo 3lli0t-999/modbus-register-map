@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "modbus-map"
+version = "0.4.1"
+description = "Dependency-free Modbus RTU/TCP frame codec and JSON register map tooling"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Glen Marsh", email = "g.marsh@helixcorp.com" }]
+keywords = ["modbus", "scada", "rtu", "ot"]
+
+[project.scripts]
+modbus-map = "modbus_map.cli:main"
+
+[tool.setuptools]
+packages = ["modbus_map"]
